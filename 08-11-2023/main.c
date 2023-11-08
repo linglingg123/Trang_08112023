@@ -27,14 +27,17 @@ int main(int argc, char *argv[]) {
 	scanf("%d",&a);
 	printf("Enter int b: ");
 	scanf("%d",&b);
-//	printf("%d",calculator(a,b));
-	int c = cal(a,b);
-	printf("%d",c);
+////	printf("%d",calculator(a,b));
+//	int c = cal(a,b);
+//	printf("%d",c);
+	
+	printf("%d \n", cong(a,b));
+	printf("%d \n", tru(a,b));
 	return 0;
 }
 
 //ham
-int cal(int a, int b){
+int cal(int a, int b){ 
 //	kdyvgadkslhvuadsbckjawdh
 	int c=a+b;
 //	printf("%d",c);
@@ -49,5 +52,22 @@ int cal(int a, int b){
 		printf("b=%d \n",b);
 	}
 
+	return c;
+}
+
+int cong(int a, int b){
+	return a+b;
+} 
+
+int tru(int a, int b){
+	int c =a-b;
+	if(a-b>0){
+		printf("ket qua >0 \n");
+		
+	}else if(a-b==0){
+		printf("a=b \n");
+	}else{
+		printf("ket qua am \n");
+	}
 	return c;
 }
