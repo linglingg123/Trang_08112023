@@ -57,7 +57,54 @@ void BMIgender(){
 	
 }
 
+int hundredCount(int input){
+	int hundred, countH;
+	if(input<100){
+		hundred=0;
+	}else if(input>=100 && input<1000){
+		do{
+			input = input - 100;
+			countH++;
+		}while(input >= 100);
+		hundred=countH;
+	}else if(input >= 1000){
+		do{
+			input = input - 1000;
+		}while(input >= 1000);
+		do{
+			input = input - 100;
+			countH++;
+		}while(input >= 100);
+		hundred=countH;
+	}
+	return hundred;
+}
+void ascendingHundreds(){
+	int a, b, c;
+	printf("Enter 3 positive integers: ");
+	scanf("%d", &a);
+	scanf("%d", &b);
+	scanf("%d", &c);
+	printf("The integers are: %d, %d and %d \n",a,b,c);
+	if(hundredCount(a) < hundredCount(b) && hundredCount(b) < hundredCount(c)){
+		printf("Yes");
+	}else{
+		printf("No");
+	}
+}
+
 int main(int argc, char *argv[]) {
-	BMIgender();
+	//BMIgender();
+	//ascendingHundreds();
+	
+	//for loop
+	int i = 0;
+	int y;
+	printf("test");
+	for(i = 0; i <= 10; i++){
+		y++;
+		printf("hello");
+	}
+	printf("%d", y);
 	return 0;
 }
